@@ -9,7 +9,7 @@ export class WindowsPage {
 
 
     public async visitarPagina(): Promise<void> {
-        await this.page.goto('/windows');
+        await this.page.goto('/windows', {waitUntil: 'domcontentloaded', timeout: 60000});
     }
 
     public async abrirNuevaVentana(): Promise<NewWindowPage> {

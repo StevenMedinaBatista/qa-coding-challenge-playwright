@@ -133,3 +133,17 @@ npx playwright test --headed
 ```bash
 npx playwright show-report
 ```
+
+---
+
+## ⚠️ Nota sobre estabilidad del sitio de pruebas
+
+El sitio https://the-internet.herokuapp.com es un entorno público de demostración y puede presentar
+latencia o tiempos de carga elevados en ciertos momentos.
+
+Para mitigar posibles fallos intermitentes:
+- Se configuraron timeouts explícitos en la navegación.
+- Se implementaron esperas basadas en la presencia de elementos clave.
+
+Aun así, en ejecuciones manuales o automatizadas podrían presentarse fallos ocasionales
+debido a la disponibilidad del entorno externo.

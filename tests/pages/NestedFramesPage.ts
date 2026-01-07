@@ -11,7 +11,7 @@ export class NestedFramesPage {
     private frameBottom = (): FrameLocator => this.page.frameLocator('frame[name="frame-bottom"]');
 
 
-    public async visitarPagina(): Promise<void> { await this.page.goto('/nested_frames');
+    public async visitarPagina(): Promise<void> { await this.page.goto('/nested_frames', {waitUntil: 'domcontentloaded', timeout: 60000} );
     }
 
     public async imprimirTextosDeFrames(): Promise<void> {
